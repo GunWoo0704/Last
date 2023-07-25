@@ -337,6 +337,7 @@ public class Dialogue_Manager : MonoBehaviour
         switch (str)
         {
             case "BuildMap1_Canvas":
+                Debug.Log("ºôµå¸Ê1 Äµ¹ö½º");
                 BuildMap1_Manager.instance.BuildMap_Canvas_On();
                 break;
             case "Move_Chapter1_3":                
@@ -377,6 +378,9 @@ public class Dialogue_Manager : MonoBehaviour
                 break;
             case "Quiz3_Canvas_On":
                 Quiz3_Manager.instance.Quiz3_Start();
+                break;
+            case "Ending_CutScene_On":
+                Quiz3_Manager.instance.End_Scene_On();
                 break;
         }
     }

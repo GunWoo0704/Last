@@ -35,7 +35,8 @@ public class Quiz3_Manager : MonoBehaviour
     GameObject Maple_Machine;
     [SerializeField]
     GameObject Maple_Button;
-
+    [SerializeField]
+    GameObject End_Scene;
     [Space]
     [Header("터치 처리용")]
     [SerializeField]
@@ -54,8 +55,7 @@ public class Quiz3_Manager : MonoBehaviour
 
     private void Start()
     {
-        //Dialogue_Manager.instance.Start_Dialogue("Chapter3");
-        Dialogue_Manager.instance.Start_Dialogue("Outro");
+        Dialogue_Manager.instance.Start_Dialogue("Chapter3");        
     }
     public void Quiz3_Start()
     {
@@ -188,6 +188,11 @@ public class Quiz3_Manager : MonoBehaviour
                 Maple_Button.SetActive(true);
                 break;
         }
+    }
+    public void End_Scene_On()
+    {
+        Quiz_Canvas.SetActive(false);
+        End_Scene.SetActive(true);
     }
     void SetText(int num)
     {
